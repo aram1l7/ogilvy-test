@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  Header,
+  ImgWrapper,
+  InnerLeftHeader,
+  LeftHeader,
+  RightHeader,
+} from "./components/Header";
+import { Button } from "./components/Button";
+
+import smallIcon from "./assets/icon-sm.svg";
+import arrowLeft from "./assets/arrow-left.svg";
+import ogilvy from "./assets/ogilvy-sm.svg";
+import man from "./assets/man.svg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header>
+        <LeftHeader>
+          <ImgWrapper width="30" height="30">
+            <img src={smallIcon} />
+          </ImgWrapper>
+
+          <InnerLeftHeader>
+            <ImgWrapper width="20" height="20">
+              <img src={arrowLeft} />
+            </ImgWrapper>
+            <span>Back to Results</span>
+          </InnerLeftHeader>
+        </LeftHeader>
+
+        <div>
+          <img src={ogilvy} />
+        </div>
+
+        <RightHeader>
+          <Button primary>Contact Ogilvy</Button>
+          <ImgWrapper rounded width="30" height="30">
+            <img src={man} />
+          </ImgWrapper>
+        </RightHeader>
+      </Header>
     </div>
   );
 }
