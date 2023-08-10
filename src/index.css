@@ -14,5 +14,16 @@ body {
 }
 
 main {
-  background: #FAFAFD;
+  background: #fafafd;
+  padding: 0 40px;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
