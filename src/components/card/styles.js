@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   width: ${({ width }) => width || "fit-content"};
   background: #fff;
   box-shadow: 0px 4px 10px 0px rgba(39, 40, 49, 0.03);
-  padding: 10px 12px;
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
 `;
@@ -52,7 +52,11 @@ export const HelperWrapper = styled.div`
   position: relative;
   padding: 20px 25px;
   width: 95%;
+
   margin-top: 30px;
+  display: ${({ withIcon }) => (withIcon ? "flex" : "block")};
+  gap: 1rem;
+  text-align: left;
 
   &:before {
     position: absolute;
@@ -60,12 +64,12 @@ export const HelperWrapper = styled.div`
     border-radius: 20px;
     width: 5px;
     background: #2d9cdb;
-    content: "";
+    ${({ withIcon }) => (withIcon ? "" : `content:"";`)}
     left: 0;
     top: 0;
   }
 
-  & > h5 {
+  h5 {
     color: #2d9cdb;
     font-size: 16px;
     font-style: normal;
@@ -73,7 +77,7 @@ export const HelperWrapper = styled.div`
     line-height: normal;
   }
 
-  & > span {
+  span {
     color: #9193a9;
     font-size: 14px;
     font-style: normal;

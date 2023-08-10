@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
   & > .skill-bar {
     height: 8px;
     width: 100%;
+    display: flex;
     border-radius: 6px;
     margin-top: 6px;
     background: rgba(0, 0, 0, 0.1);
