@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
     background: #fd5359;
     animation: progress 0.4s ease-in-out forwards;
     opacity: 0;
+    margin-top: 0;
   }
 `;
 

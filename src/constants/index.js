@@ -59,3 +59,45 @@ export const countryProgress = [
     value: "10",
   },
 ];
+
+export const socialProgress = [
+  {
+    id: 1,
+    title: "Facebook  12k",
+    value: "1.2M",
+  },
+  {
+    id: 2,
+    title: "Instagram  15k",
+    value: "800k",
+  },
+  {
+    id: 3,
+    title: "Linkedin",
+    value: "200k",
+  },
+  { id: 4, title: "Twitter", value: "50k" },
+];
+
+export const tabs = [
+  {
+    id: 1,
+    title: "Summary",
+  },
+  {
+    id: 2,
+    title: "Performance",
+  },
+  {
+    id: 3,
+    title: "Portfolio",
+  },
+  {
+    id: 4,
+    title: "Reviews",
+  },
+  {
+    id: 5,
+    title: "Latest",
+  },
+];

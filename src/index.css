@@ -18,6 +18,10 @@ main {
   padding: 0 40px;
 }
 
+.card-wrapper {
+  padding: 0 120px;
+}
+
 @keyframes progress {
   0% {
     width: 0;

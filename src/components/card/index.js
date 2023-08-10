@@ -18,16 +18,26 @@ function Card(props) {
         <ProgressWrapper>
           {props.progress.map((ele) => {
             return (
-              <ProgressBar key={ele.id} title={ele.title} value={ele.value} />
+              <ProgressBar
+                hidePercentage={props.hidePercentage}
+                key={ele.id}
+                title={ele.title}
+                value={ele.value}
+              />
             );
           })}
         </ProgressWrapper>
       )}
       {props.helperTitle && (
-        <HelperWrapper withIcon={props.withIcon}>
+        <HelperWrapper isGreen={props.isGreen} withIcon={props.withIcon}>
           {props.withIcon && (
             <div>
-              <img src={flare} />
+              <img
+                style={{
+                  filter: props.isGreen ? "hue-rotate(266deg)" : "none",
+                }}
+                src={flare}
+              />
             </div>
           )}
           <div>

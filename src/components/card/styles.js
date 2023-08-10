@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const Wrapper = styled.div`
   border-radius: 2px;
-  width: ${({ width }) => width || "fit-content"};
+  width: ${({ width }) => width || "100%"};
   background: #fff;
   box-shadow: 0px 4px 10px 0px rgba(39, 40, 49, 0.03);
   padding: 10px 20px;
@@ -47,30 +47,41 @@ export const ProgressWrapper = styled.div`
 `;
 
 export const HelperWrapper = styled.div`
-  background: #f4fafd;
   border-radius: 3px;
   position: relative;
   padding: 20px 25px;
-  width: 95%;
+  width: 100%;
 
   margin-top: 30px;
   display: ${({ withIcon }) => (withIcon ? "flex" : "block")};
   gap: 1rem;
   text-align: left;
 
+  &:after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    background: ${({ isGreen }) => (isGreen ? "#27AE60" : "#2d9cdb")};
+    opacity: 0.2;
+  }
+
   &:before {
     position: absolute;
     height: 100%;
     border-radius: 20px;
     width: 5px;
-    background: #2d9cdb;
+    opacity: 0.2;
+    background: ${({ isGreen }) => (isGreen ? "#27AE60" : "#2d9cdb")};
     ${({ withIcon }) => (withIcon ? "" : `content:"";`)}
     left: 0;
     top: 0;
   }
 
   h5 {
-    color: #2d9cdb;
+    color: ${({ isGreen }) => (isGreen ? "#27AE60" : "#2d9cdb")};
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
